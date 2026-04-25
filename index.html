@@ -1,26 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>SIDOLICORP.ORG</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SIDOLICORP.ORG | Multinational Enterprise</title>
+
 <style>
-body {
-  background:black;
-  color:white;
-  text-align:center;
-  font-family:Arial;
+:root {
+  --black:#050505;
+  --dark:#0d0d0d;
+  --gold:#d4af37;
+  --soft:#cfcfcf;
+  --white:#ffffff;
 }
-h1 {
-  color:gold;
-  margin-top:120px;
-  font-size:50px;
+
+* { box-sizing:border-box; scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:var(--black);
+  color:var(--white);
+}
+
+header {
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(0,0,0,0.9);
+  border-bottom:1px solid rgba(212,175,55,0.4);
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo {
+  color:var(--gold);
+  font-weight:bold;
+  font-size:24px;
+  letter-spacing:2px;
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  margin-left:22px;
+  font-size:14px;
+}
+
+nav a:hover { color:var(--gold); }
+
+.hero {
+  min-height:100vh;
+  padding:160px 8% 80px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.9)),
+    radial-gradient(circle at top right, rgba(212,175,55,.25), transparent 35%);
+}
+
+.hero h1 {
+  font-size:60px;
+  max-width:850px;
+  color:var(--gold);
+  margin-bottom:20px;
+}
+
+.hero p {
+  max-width:700px;
+  font-size:20px;
+  color:var(--soft);
+  line-height:1.7;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 28px;
+  background:var(--gold);
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:6px;
+}
+
+section {
+  padding:90px 8%;
+}
+
+h2 {
+  color:var(--gold);
+  font-size:36px;
+  margin-bottom:18px;
+}
+
+.lead {
+  color:var(--soft);
+  max-width:850px;
+  line-height:1.8;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+  margin-top:35px;
+}
+
+.card {
+  background:linear-gradient(180deg,#111,#080808);
+  border:1px solid rgba(212,175,55,.25);
+  padding:28px;
+  border-radius:14px;
+  min-height:210px;
+}
+
+.card h3 {
+  color:var(--gold);
+  margin-top:0;
+}
+
+.card p {
+  color:var(--soft);
+  line-height:1.7;
+}
+
+.band {
+  background:#0b0b0b;
+  border-top:1px solid rgba(212,175,55,.18);
+  border-bottom:1px solid rgba(212,175,55,.18);
+}
+
+.stats {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+  margin-top:35px;
+}
+
+.stat {
+  padding:25px;
+  background:#111;
+  border-radius:12px;
+  text-align:center;
+}
+
+.stat strong {
+  display:block;
+  font-size:34px;
+  color:var(--gold);
+}
+
+form {
+  max-width:650px;
+  margin-top:30px;
+}
+
+input, textarea {
+  width:100%;
+  margin-bottom:14px;
+  padding:14px;
+  background:#111;
+  color:white;
+  border:1px solid #333;
+  border-radius:6px;
+}
+
+button {
+  background:var(--gold);
+  color:black;
+  border:0;
+  padding:14px 28px;
+  font-weight:bold;
+  border-radius:6px;
+}
+
+footer {
+  padding:35px 8%;
+  text-align:center;
+  background:#050505;
+  color:#999;
+  border-top:1px solid rgba(212,175,55,.25);
+}
+
+@media(max-width:700px) {
+  header { flex-direction:column; gap:12px; }
+  nav a { margin:0 8px; font-size:12px; }
+  .hero h1 { font-size:42px; }
 }
 </style>
 </head>
+
 <body>
 
-<h1>SIDOLICORP.ORG</h1>
-<p>Enterprise Platform Live</p>
+<header>
+  <div class="logo">SIDOLICORP</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#divisions">Divisions</a>
+    <a href="#global">Global</a>
+    <a href="#investors">Investors</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Multinational Enterprise Across Healthcare, Trade, Advisory & Technology</h1>
+    <p>
+      SIDOLICORP.ORG is a diversified LLC built to operate across strategic global sectors,
+      including medical clinics, import and export operations, advisory councils,
+      electronic maintenance, and software programming divisions.
+    </p>
+    <a class="btn" href="#contact">Contact SIDOLICORP</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About SIDOLICORP</h2>
+  <p class="lead">
+    SIDOLICORP is designed as a multi-field enterprise platform serving regional and
+    international markets through healthcare operations, commercial trade, corporate advisory,
+    electronic systems support, and digital technology development.
+  </p>
+
+  <div class="stats">
+    <div class="stat"><strong>4+</strong>Core Divisions</div>
+    <div class="stat"><strong>3</strong>Target Regions</div>
+    <div class="stat"><strong>24/7</strong>Digital Presence</div>
+    <div class="stat"><strong>Global</strong>Business Vision</div>
+  </div>
+</section>
+
+<section id="divisions" class="band">
+  <h2>Enterprise Divisions</h2>
+  <p class="lead">
+    Our structure allows SIDOLICORP to operate as a diversified corporate group
+    across high-value industries.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Medical Clinics</h3>
+      <p>Healthcare clinics, diagnostic services, outpatient care, wellness programs, and future multi-specialty medical expansion.</p>
+    </div>
+
+    <div class="card">
+      <h3>Import & Export</h3>
+      <p>International sourcing, product distribution, logistics coordination, commercial partnerships, and cross-border trade operations.</p>
+    </div>
+
+    <div class="card">
+      <h3>Advisory Councils</h3>
+      <p>Strategic advisory services for healthcare, education, investment, regulation, governance, and international business development.</p>
+    </div>
+
+    <div class="card">
+      <h3>Technology Division</h3>
+      <p>Programming, automation, enterprise software, technical support, electronic diagnostics, maintenance, and digital systems development.</p>
+    </div>
+  </div>
+</section>
+
+<section id="global">
+  <h2>Global Presence</h2>
+  <p class="lead">
+    SIDOLICORP is positioned for international activity across the Middle East,
+    Europe, and North America.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Saudi Arabia</h3>
+      <p>Regional business coordination, healthcare opportunity development, and strategic headquarters operations.</p>
+    </div>
+
+    <div class="card">
+      <h3>Netherlands</h3>
+      <p>European partnership access, healthcare education links, trade connections, and regulatory collaboration.</p>
+    </div>
+
+    <div class="card">
+      <h3>United States</h3>
+      <p>Expansion planning, medical business development, technology growth, and institutional partnerships.</p>
+    </div>
+  </div>
+</section>
+
+<section id="investors" class="band">
+  <h2>Investor & Partner Relations</h2>
+  <p class="lead">
+    SIDOLICORP welcomes strategic partnerships with healthcare institutions,
+    trade operators, technology providers, investors, advisory experts, and
+    public-sector stakeholders.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact SIDOLICORP</h2>
+  <p class="lead">
+    For business inquiries, medical partnerships, advisory requests, technology services,
+    or trade opportunities, contact our executive office.
+  </p>
+
+  <form>
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email Address" required />
+    <input type="text" placeholder="Subject" />
+    <textarea rows="6" placeholder="Message"></textarea>
+    <button type="submit">Send Inquiry</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 SIDOLICORP.ORG — Multinational Enterprise Platform. All Rights Reserved.
+</footer>
 
 </body>
-  
 </html>
