@@ -1,0 +1,25 @@
+let tickets = [];
+
+export default function handler(req, res) {
+  if (req.method === 'POST') {
+    const ticket = {
+      id: Date.now(),
+      name: req.body.name,
+      email: req.body.email,
+      service: req.body.service,
+      device: req.body.device,
+      issue: req.body.issue,
+      status: "Pending",
+      createdAt: new Date()
+    };
+
+    tickets.push(ticket);
+    return res.status(200).json({ success: true, ticket });
+  }
+
+  if (req.method === 'GET') {
+    return res.status(200).json(tickets);
+  }
+
+  res.status(405).json({ message: "Method not allowed" });
+}
